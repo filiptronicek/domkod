@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Domkód generátor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="container-fluid">
+  <h1> Domkód generátor </h1>
+  <div class="text-center">
+ 
+  </div>
+
+  <div class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="content">Obsah:</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="content" placeholder="Text nebo URL">
+      </div>
+    </div>
+    <div class="form-group"> 
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="button" class="btn btn-default" id="generate">Generovat Domkód</button>
+      </div>
+    </div>
+  </div>
+</div>   
+<center>
+<img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
+         class="qr-code img-thumbnail img-responsive">
+  
+</center>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
