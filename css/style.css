@@ -1,10 +1,10 @@
  @import url('https://fonts.googleapis.com/css?family=Lato');
 
-
 .qr-code {
   max-width: 200px;
   margin: 10px;
   text-align: center;
+  z-index: 5;
 }
 h1 {
   font-family: 'Lato', sans-serif;
@@ -13,4 +13,26 @@ h1 {
 }
 .control-label {
   font-size: 17px;
+}
+.dark {
+  display: none;
+}
+.light {
+  display: block;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #414040;
+    color: #e4e4e4;
+  }
+  #content {
+    background: #414040;
+    color: #e4e4e4;
+  }
+  .dark {
+    display: block;
+  }
+  .light {
+    display: none;
+  }
 }
