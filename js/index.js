@@ -9,6 +9,9 @@ setInterval(() => {
 if(toConvert != $("#content").val()) {
   toConvert = $("#content").val();
   generate(toConvert);
+}
+if($("#content").val() == "") {
+  $("#qrcode").html("");
 
 }
   
