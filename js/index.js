@@ -8,7 +8,10 @@ function generate(text) {
     $("#qrcode").qrcode(text);
 }
 
-setInterval(() => {
+navigator.clipboard.readText().then(
+  clipText => $("#content").value = clipText);
+
+const updateQR = () => {
     if (toConvert != $("#content").val()) {
         toConvert = $("#content").val();
         generate(toConvert);
@@ -17,7 +20,7 @@ setInterval(() => {
         $("#qrcode").html("");
     }
 
-}, 10);
+};
 
 if (month == 11 || month == 0 || month == 1) {
     new Snowflakes({count: 50, maxOpacity: 0.8, maxSize: 20, zIndex: 2});
