@@ -17,7 +17,6 @@ const updateQR = () => {
     if ($("#content").val() == "") {
         $("#qrcode").html("");
     }
-
 };
 
 if (navigator.clipboard.readText) {
