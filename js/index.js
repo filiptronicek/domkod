@@ -1,6 +1,9 @@
-var toConvert = $("#content").val();
-function generate(text) {
+let toConvert = $("#content").val();
 
+const date = new Date();
+const month = date.getMonth();
+
+function generate(text) {
     $("#qrcode").html("");
     $("#qrcode").qrcode(text);
 }
@@ -12,12 +15,10 @@ setInterval(() => {
     }
     if ($("#content").val() == "") {
         $("#qrcode").html("");
-
     }
 
 }, 10);
-var date = new Date();
-var month = date.getMonth();
+
 if (month == 11 || month == 0 || month == 1) {
-    var sf = new Snowflakes({count: 50, maxOpacity: 0.8, maxSize: 20, zIndex: 2});
+    new Snowflakes({count: 50, maxOpacity: 0.8, maxSize: 20, zIndex: 2});
 }
